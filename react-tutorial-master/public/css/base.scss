@@ -1,0 +1,46 @@
+@function size($multiplier,$units){
+  $last : 1;
+  $current : 2;
+
+  @for $i from 1 through $multiplier{
+      $temp : $current + $last;
+      $last : $current;
+      $current : $temp;
+  }
+
+  @return $current + $units;
+}
+
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+#content{
+  max-width: size(7,em);
+  margin: 0 auto;
+}
+
+.comment{
+  background:#eee;
+  margin:size(1,pt);
+  padding:size(2,pt);
+  @include prefix(border-radius, size(3,pt), webkit ms o moz);
+}
+
+.commentAuthor, .commentContent{
+  display:inline-block;
+}
+
+.commentAuthor{
+  width: size(3,em)
+}

@@ -124,7 +124,6 @@
         render: function() {
           return (
             <div className="commentBox">
-              <h1>Comments</h1>
               <CommentList data={this.state.data} />
               <CommentForm onCommentSubmit={this.handleCommentSubmit} />
             </div>
@@ -146,7 +145,7 @@
               <h2 className="commentAuthor">
                 {this.props.author}
               </h2>
-              <span dangerouslySetInnerHTML={this.rawMarkup()} />
+              <div className="commentContent" dangerouslySetInnerHTML={this.rawMarkup()} />
             </div>
           );
         }
