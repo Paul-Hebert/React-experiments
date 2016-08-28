@@ -42,5 +42,11 @@
 }
 
 .commentAuthor{
-  width: size(3,em)
+  font-family:Roboto Slab;
+  width: size(4,em);
+  font-size: size(4,pt);
+}
+
+.commentContent{
+  font-family:Roboto;
 }

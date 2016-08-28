@@ -16,6 +16,11 @@
   display: inline-block; }
 
 .commentAuthor {
-  width: 8em; }
+  font-family: Roboto Slab;
+  width: 13em;
+  font-size: 13pt; }
+
+.commentContent {
+  font-family: Roboto; }
 
 /*# sourceMappingURL=base.css.map */
