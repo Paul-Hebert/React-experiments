@@ -143,9 +143,14 @@
           var md = new Remarkable();
           return (
             <div className="comment">
+              <div className="imgWrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg" />
+              </div>
+
               <h2 className="commentAuthor">
                 {this.props.author}
               </h2>
+
               <div className="commentContent" dangerouslySetInnerHTML={this.rawMarkup()} />
             </div>
           );

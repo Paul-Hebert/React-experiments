@@ -1,3 +1,14 @@
+$black : #222;
+
+$white : #fffff8;
+
+$light-grey : #eee;
+
+$grey : #ccc;
+
+$accent : #9FCA56;
+$hovered : #B8E866;
+
 @function size($multiplier,$units){
   $last : 1;
   $current : 2;
@@ -49,4 +60,43 @@
 
 .commentContent{
   font-family:Roboto;
+}
+
+.imgWrapper{
+  @include prefix(border-radius, 50%, webkit ms o moz);  
+  overflow:hidden;
+  width:size(1,em); 
+  height:size(1,em); 
+  display:inline-block;
+  vertical-align:middle;
+  margin-right:size(2,pt);
+
+  img{
+    width:100%;
+  }
+}
+
+input[type=text]{
+  &:disabled{
+    border:0px;
+    background:inherit;
+    color:inherit;
+  }
+
+  @extend .commentAuthor;
+}
+
+input[type=submit]{
+  @include prefix(border-radius, size(3,pt), webkit ms o moz); 
+  background:$accent;
+  color:$white;
+  border:none;
+  display:block;
+  padding: size(3,pt) size(5,pt);
+  @include prefix(transition,background 300ms, webkit ms o moz);
+  cursor:pointer;
+
+  &:hover{
+    background:$hovered;
+  }
 }

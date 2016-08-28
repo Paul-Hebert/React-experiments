@@ -12,15 +12,55 @@
   -moz-border-radius: 8pt;
   border-radius: 8pt; }
 
-.commentAuthor, .commentContent {
+.commentAuthor, input[type=text], .commentContent {
   display: inline-block; }
 
-.commentAuthor {
+.commentAuthor, input[type=text] {
   font-family: Roboto Slab;
   width: 13em;
   font-size: 13pt; }
 
 .commentContent {
   font-family: Roboto; }
+
+.imgWrapper {
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 3em;
+  height: 3em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5pt; }
+  .imgWrapper img {
+    width: 100%; }
+
+input[type=text]:disabled {
+  border: 0px;
+  background: inherit;
+  color: inherit; }
+
+input[type=submit] {
+  -webkit-border-radius: 8pt;
+  -ms-border-radius: 8pt;
+  -o-border-radius: 8pt;
+  -moz-border-radius: 8pt;
+  border-radius: 8pt;
+  background: #9FCA56;
+  color: #fffff8;
+  border: none;
+  display: block;
+  padding: 8pt 21pt;
+  -webkit-transition: background 300ms;
+  -ms-transition: background 300ms;
+  -o-transition: background 300ms;
+  -moz-transition: background 300ms;
+  transition: background 300ms;
+  cursor: pointer; }
+  input[type=submit]:hover {
+    background: #B8E866; }
 
 /*# sourceMappingURL=base.css.map */
